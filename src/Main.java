@@ -19,3 +19,20 @@ class Calculadora {
             System.out.println("9. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
+            if (opcion >= 1 && opcion <= 7) {
+                System.out.print("Ingrese el primer número: ");
+                double num1 = scanner.nextDouble();
+                double num2 = 0;
+                if (opcion != 6) {
+                    System.out.print("Ingrese el segundo número: ");
+                    num2 = scanner.nextDouble();
+                }
+                switch (opcion) {
+                    case 1: System.out.println("Resultado: " + (num1 + num2)); break;
+                    case 2: System.out.println("Resultado: " + (num1 - num2)); break;
+                    case 3: System.out.println("Resultado: " + (num1 * num2)); break;
+                    case 4: System.out.println("Resultado: " + (num2 != 0 ? (num1 / num2) : "Error: División por cero")); break;
+                    case 5: System.out.println("Resultado: " + Math.pow(num1, num2)); break;
+                    case 6: System.out.println("Resultado: " + Math.sqrt(num1)); break;
+                    case 7: System.out.println("Resultado: " + (num1 % num2)); break;
+                }

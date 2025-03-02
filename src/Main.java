@@ -36,3 +36,17 @@ class Calculadora {
                     case 6: System.out.println("Resultado: " + Math.sqrt(num1)); break;
                     case 7: System.out.println("Resultado: " + (num1 % num2)); break;
                 }
+} else if (opcion == 8) {
+                System.out.print("Ingrese la temperatura en grados Celsius: ");
+                double celsius = scanner.nextDouble();
+                double fahrenheit = (celsius * 9/5) + 32;
+                System.out.println("Resultado: " + fahrenheit + "°F");
+            } else if (opcion != 9) {
+                System.out.println("Opción no válida.");
+            }
+        } while (opcion != 9);
+
+        System.out.println("Calculadora finalizada.");
+        scanner.close();
+    }
+}                
